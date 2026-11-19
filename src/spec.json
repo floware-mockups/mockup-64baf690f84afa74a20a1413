@@ -34,7 +34,8 @@
         "Importo atteso",
         "Importo incassato",
         "Differenza",
-        "Esito"
+        "Esito",
+        "Note"
       ],
       "rows": [
         [
@@ -42,28 +43,32 @@
           "€ 4.200",
           "€ 4.200",
           "€ 0",
-          "Riconciliato"
+          "Riconciliato",
+          "Importo corrispondente"
         ],
         [
           "Febbraio",
           "€ 3.800",
           "€ 3.500",
           "€ 300",
-          "Da verificare"
+          "Da verificare",
+          "Verificare lo scostamento"
         ],
         [
           "Marzo",
           "€ 5.120",
           "€ 4.120",
           "€ 1.000",
-          "Da verificare"
+          "Da verificare",
+          "Controllare i movimenti registrati"
         ],
         [
           "Aprile",
           "€ 5.300",
           "€ 5.160",
           "€ 140",
-          "Da verificare"
+          "Da verificare",
+          "Verificare la differenza residua"
         ]
       ],
       "form": []

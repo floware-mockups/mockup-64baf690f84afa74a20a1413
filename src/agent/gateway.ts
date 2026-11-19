@@ -11,6 +11,8 @@ import {
   type MockupAgentError,
   type MockupAgentErrorCode,
   type MockupAgentManifestResponse,
+  type MockupAgentReviewRequest,
+  type MockupAgentReviewResponse,
   type MockupAgentRunRequest,
   type MockupAgentRunResponse,
 } from "./contract.ts";
@@ -31,8 +33,14 @@ export type GatewayClient = {
   manifest(): Promise<GatewayResult<MockupAgentManifestResponse>>;
   ask(body: MockupAgentAskRequest): Promise<GatewayResult<MockupAgentAskResponse>>;
   run(body: MockupAgentRunRequest): Promise<GatewayResult<MockupAgentRunResponse>>;
+  /** WZ-2126: risposte proposte per una lista di controllo. */
+  review(body: MockupAgentReviewRequest): Promise<GatewayResult<MockupAgentReviewResponse>>;
   document(file: { bytes: ArrayBuffer | Uint8Array; type: string; name: string }): Promise<GatewayResult<MockupAgentDocumentResponse>>;
+  /** WZ-2126: testo breve di un tipo di pagina (compito chiuso, istruzioni sul gateway). */
+  compose(body: MockupAgentComposeRequest): Promise<GatewayResult<MockupAgentComposeResponse>>;
 };
+export type MockupAgentComposeRequest = { task: "circolare" | "versione_breve" | "motivazione"; fields: Record<string, string>; requestKey: string };
+export type MockupAgentComposeResponse = { text: string; remaining?: number };
 
 export function createGatewayClient(options: {
   origin: string;
@@ -89,6 +97,8 @@ export function createGatewayClient(options: {
     manifest: () => call(mockupAgentRoutes.manifest, "{}", jsonHeaders),
     ask: (body) => call(mockupAgentRoutes.ask, JSON.stringify(body), jsonHeaders),
     run: (body) => call(mockupAgentRoutes.run, JSON.stringify(body), jsonHeaders),
+    review: (body) => call(mockupAgentRoutes.review, JSON.stringify(body), jsonHeaders),
+    compose: (body) => call(mockupAgentRoutes.compose, JSON.stringify(body), jsonHeaders),
     document: (file) =>
       call(mockupAgentRoutes.document, new Blob([file.bytes as BlobPart], { type: file.type }), {
         "Content-Type": file.type,
