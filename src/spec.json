@@ -1,0 +1,318 @@
+{
+  "title": "Controllo delle riscossioni – mia versione",
+  "description": "Prototipo per confrontare incassi attesi e movimenti registrati, esaminare differenze e duplicati e consultare gli esiti dei controlli.",
+  "accent": "indigo",
+  "pages": [
+    {
+      "id": "panoramica",
+      "title": "Panoramica",
+      "description": "Sintesi delle riscossioni riconciliate e degli importi che richiedono verifica. Il riepilogo mensile è presentato come tabella per agevolare il confronto.",
+      "metrics": [
+        {
+          "label": "Importo atteso",
+          "value": "€ 18.420"
+        },
+        {
+          "label": "Incassato",
+          "value": "€ 16.980"
+        },
+        {
+          "label": "Da verificare",
+          "value": "€ 1.440"
+        },
+        {
+          "label": "Pagamenti mancanti",
+          "value": "4"
+        },
+        {
+          "label": "Possibili duplicati",
+          "value": "2"
+        }
+      ],
+      "columns": [
+        "Mese",
+        "Importo atteso",
+        "Importo incassato",
+        "Differenza",
+        "Esito"
+      ],
+      "rows": [
+        [
+          "Gennaio",
+          "€ 4.200",
+          "€ 4.200",
+          "€ 0",
+          "Riconciliato"
+        ],
+        [
+          "Febbraio",
+          "€ 3.800",
+          "€ 3.500",
+          "€ 300",
+          "Da verificare"
+        ],
+        [
+          "Marzo",
+          "€ 5.120",
+          "€ 4.120",
+          "€ 1.000",
+          "Da verificare"
+        ],
+        [
+          "Aprile",
+          "€ 5.300",
+          "€ 5.160",
+          "€ 140",
+          "Da verificare"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "importa-dati",
+      "title": "Importa e confronta",
+      "description": "Avvia l'analisi dei documenti in un prototipo dimostrativo. I nomi dei file e gli esiti sono fittizi; non sono previsti caricamenti o elaborazioni esterne.",
+      "metrics": [],
+      "columns": [
+        "Riferimento",
+        "Periodo",
+        "Movimenti estratti",
+        "Righe attese",
+        "Esito"
+      ],
+      "rows": [
+        [
+          "Rendiconto tesoriere",
+          "Aprile",
+          "28",
+          "30",
+          "Pronto per confronto"
+        ],
+        [
+          "Elenco importi attesi",
+          "Aprile",
+          "—",
+          "30",
+          "Pronto per confronto"
+        ]
+      ],
+      "form": [
+        "Riferimento",
+        "Periodo",
+        "Movimenti estratti",
+        "Righe attese",
+        "Esito"
+      ]
+    },
+    {
+      "id": "riconciliazione",
+      "title": "Riconciliazione",
+      "description": "Esamina gli importi attesi, i movimenti abbinati e le anomalie. Usa la ricerca e i filtri della tabella per restringere i risultati; sono separati dal form di inserimento.",
+      "metrics": [
+        {
+          "label": "Righe confrontate",
+          "value": "30"
+        },
+        {
+          "label": "Riconciliate",
+          "value": "24"
+        },
+        {
+          "label": "Differenze",
+          "value": "4"
+        },
+        {
+          "label": "Mancati pagamenti",
+          "value": "4"
+        },
+        {
+          "label": "Possibili duplicati",
+          "value": "2"
+        }
+      ],
+      "columns": [
+        "Codice pratica",
+        "Contribuente",
+        "Importo atteso",
+        "Importo registrato",
+        "Differenza",
+        "Data movimento",
+        "Anomalia",
+        "Esito"
+      ],
+      "rows": [
+        [
+          "LUM-1042",
+          "Nubi Argento",
+          "€ 300",
+          "€ 300",
+          "€ 0",
+          "05/01/2027",
+          "—",
+          "Riconciliato"
+        ],
+        [
+          "VEL-2081",
+          "Vela Quarzo",
+          "€ 450",
+          "€ 450",
+          "€ 0",
+          "12/01/2027",
+          "—",
+          "Riconciliato"
+        ],
+        [
+          "NUB-3105",
+          "Lumo Rame",
+          "€ 280",
+          "€ 0",
+          "€ 280",
+          "—",
+          "Pagamento assente",
+          "Da verificare"
+        ],
+        [
+          "LUM-4116",
+          "Nubi Cobalto",
+          "€ 520",
+          "€ 220",
+          "€ 300",
+          "18/02/2027",
+          "Importo inferiore",
+          "Da verificare"
+        ],
+        [
+          "VEL-5120",
+          "Vela Ambra",
+          "€ 190",
+          "€ 380",
+          "€ -190",
+          "08/03/2027",
+          "Possibile doppio versamento",
+          "Da verificare"
+        ],
+        [
+          "NUB-6133",
+          "Lumo Giada",
+          "€ 610",
+          "€ 610",
+          "€ 0",
+          "16/03/2027",
+          "—",
+          "Riconciliato"
+        ],
+        [
+          "LUM-7148",
+          "Nubi Lilla",
+          "€ 340",
+          "€ 0",
+          "€ 340",
+          "—",
+          "Pagamento assente",
+          "Da verificare"
+        ],
+        [
+          "VEL-8152",
+          "Vela Opale",
+          "€ 270",
+          "€ 270",
+          "€ 0",
+          "09/04/2027",
+          "—",
+          "Riconciliato"
+        ]
+      ],
+      "form": [
+        "Codice pratica",
+        "Contribuente",
+        "Importo atteso",
+        "Importo registrato",
+        "Differenza",
+        "Data movimento",
+        "Anomalia",
+        "Esito"
+      ]
+    },
+    {
+      "id": "controlli",
+      "title": "Esiti dei controlli",
+      "description": "Elenco delle verifiche eseguite sul confronto tra rendiconto e importi attesi, con esito e dettaglio sintetico.",
+      "metrics": [
+        {
+          "label": "Controlli eseguiti",
+          "value": "6"
+        },
+        {
+          "label": "Con esito positivo",
+          "value": "3"
+        },
+        {
+          "label": "Da rivedere",
+          "value": "3"
+        }
+      ],
+      "columns": [
+        "Controllo",
+        "Risultato",
+        "Elementi esaminati",
+        "Esito",
+        "Dettaglio"
+      ],
+      "rows": [
+        [
+          "Formato dei dati",
+          "Completato",
+          "2 documenti",
+          "Positivo",
+          "Struttura leggibile"
+        ],
+        [
+          "Estrazione movimenti",
+          "Completato",
+          "28 movimenti",
+          "Positivo",
+          "Campi principali individuati"
+        ],
+        [
+          "Abbinamento importi",
+          "Completato",
+          "30 righe",
+          "Da rivedere",
+          "24 abbinamenti esatti"
+        ],
+        [
+          "Pagamenti mancanti",
+          "Completato",
+          "4 posizioni",
+          "Da rivedere",
+          "Nessun movimento associato"
+        ],
+        [
+          "Ricerca duplicati",
+          "Completato",
+          "2 coppie candidate",
+          "Da rivedere",
+          "Verificare date e importi"
+        ],
+        [
+          "Riepilogo mensile",
+          "Completato",
+          "4 mesi",
+          "Positivo",
+          "Totali calcolati per mese"
+        ]
+      ],
+      "form": [
+        "Controllo",
+        "Risultato",
+        "Elementi esaminati",
+        "Esito",
+        "Dettaglio"
+      ]
+    }
+  ],
+  "theme": {
+    "palette": "petrolio",
+    "fonts": "alta-leggibilita"
+  }
+}
