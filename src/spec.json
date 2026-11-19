@@ -35,7 +35,8 @@
         "Importo incassato",
         "Differenza",
         "Esito",
-        "Note"
+        "Note",
+        "Responsabile"
       ],
       "rows": [
         [
@@ -44,7 +45,8 @@
           "€ 4.200",
           "€ 0",
           "Riconciliato",
-          "Importo corrispondente"
+          "Importo corrispondente",
+          "Marta Riva"
         ],
         [
           "Febbraio",
@@ -52,7 +54,8 @@
           "€ 3.500",
           "€ 300",
           "Da verificare",
-          "Verificare lo scostamento"
+          "Verificare lo scostamento",
+          "Luca Serra"
         ],
         [
           "Marzo",
@@ -60,7 +63,8 @@
           "€ 4.120",
           "€ 1.000",
           "Da verificare",
-          "Controllare i movimenti registrati"
+          "Controllare i movimenti registrati",
+          "Giulia Conti"
         ],
         [
           "Aprile",
@@ -68,7 +72,8 @@
           "€ 5.160",
           "€ 140",
           "Da verificare",
-          "Verificare la differenza residua"
+          "Verificare la differenza residua",
+          "Paolo Neri"
         ]
       ],
       "form": []
@@ -319,5 +324,17 @@
   "theme": {
     "palette": "petrolio",
     "fonts": "alta-leggibilita"
-  }
+  },
+  "custom": [
+    {
+      "name": "ConfermaStatoRiconciliazione",
+      "title": "Conferma cambio di stato",
+      "description": "Richiede conferma prima di modificare lo stato di una riga.",
+      "role": "confirm",
+      "pageId": "riconciliazione",
+      "events": [
+        "status"
+      ]
+    }
+  ]
 }
