@@ -1,5 +1,5 @@
 {
-  "title": "Controllo delle riscossioni – mia versione",
+  "title": "Riscossioni – controllo degli incassi",
   "description": "Prototipo per confrontare incassi attesi e movimenti registrati, esaminare differenze e duplicati e consultare gli esiti dei controlli.",
   "accent": "indigo",
   "pages": [
@@ -322,7 +322,7 @@
     }
   ],
   "theme": {
-    "palette": "petrolio",
+    "palette": "terracotta",
     "fonts": "alta-leggibilita"
   },
   "custom": [
